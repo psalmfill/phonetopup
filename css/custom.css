@@ -8,7 +8,7 @@
 }
 #balanceDiv h2 {
 	color: #333333;
-	font-size: 36px;
+	font-size: 25px;
 	
 }
 
@@ -28,8 +28,8 @@
 
 }
 #balance #balHolder {
-	border: 4px solid #C4C4C4;
-	padding: 10%;
+	border: 2px solid #C4C4C4;
+	padding: 8%;
 }
 #balance #balHolder p {
 	font-size: 35px;
@@ -44,10 +44,15 @@
 }
 #wallet-topUpBtn div div {
 	width: 80%;
-	margin: 2% 0%;
+	margin: 1% 0%;
 }
 #wallet-topUpBtn div {
 	padding: 0;
+	margin-bottom: 1%;
+	height: 50px;
+}
+#wallet-topUpBtn button{
+	margin-top: 50px;
 }
 .topUpHeader {
 	background: #39689C;
@@ -99,7 +104,7 @@
 .ck-button {
     background-color:#EFEFEF;
     border-radius:4px;
-    border:1px solid #000000;
+    border:1px solid #cccccc;
     overflow:hidden;
     float:left;
     padding: 0;
@@ -109,6 +114,7 @@
 .ck-button label {
     width:100%;
 }
+
 .ck-button label span {
 	text-align:center;
     padding:0px 0px;
@@ -116,8 +122,15 @@
     height: 100%;
     display:block; 
     margin-bottom: -20%;
-    height: 40px;
-    line-height: 35px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #333333;
+    cursor: pointer;
+}
+.ck-button:hover span {
+	background: #00aeff;
+	color: #FFFFFF;
 }
 .ck-button label input {
     display: none;
@@ -125,4 +138,5 @@
 .ck-button label input:checked + span{
    background: #39689c;
    color: #FFFFFF;
+   font-size: 20px;
 }
