@@ -1,7 +1,7 @@
 #body {
 	padding:0;
 	font-family: Nunito Sans;
-	background: #F3F9FF;
+	background: #FFFFFF;
 }
 #balanceDiv {
 	padding:1%;
@@ -268,7 +268,12 @@
   background-color: #0069D9;
   color: #FFFFFF !important;
 }
-
+.box {
+	display: none;
+}
+.show-box {
+	display: block;
+}
 @media all 
   and (max-device-width: 765px){
   	#wallet-topUpBtn  {
