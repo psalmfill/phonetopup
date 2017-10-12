@@ -3,6 +3,10 @@
 	font-family: Nunito Sans;
 	background: #FFFFFF;
 }
+h4 {
+	color: #39689C;
+	padding: 2%;
+}
 #balanceDiv {
 	padding:1%;
 	
