@@ -36,35 +36,19 @@
 	color: #333333;
 	padding: 2%;
 }
+#wallet-topUpBtn {
+	padding:1%;
+}
 #wallet-topUpBtn h3 {
 	color: #00aeff;
 }
-#wallet-topUpBtn > div,#dataTopUp >div{
-	width: 100%;
-	margin: 1% auto
+#wallet-topUpBtn div div {
+	width: 80%;
+	margin: 2% 0%;
 }
-#wallet-topUpBtn > div div,#dataTopUp >div div{ padding: 0; margin: 0 auto;}
-#wallet-topUpBtn div > button, #dataTopUp div >button{
-	border: 1px solid #CCCCCC;
-	background: #F1F1F1;
-	width: 90%;
-	height: 50px;
-	border-radius: 10px;
-	cursor: pointer;
+#wallet-topUpBtn div {
+	padding: 0;
 }
-#wallet-topUpBtn div > button:hover,#dataTopUp div > button:hover{
-	background: #00aeff;
-	color: #FFFFFF;
-}
-#wallet-topUpBtn div > button:active,#dataTopUp div > button:active{
-	background: #39689c;
-}
-#wallet-topUpBtn > button {
-	margin-top: 8%;
-	height: 50px;
-	cursor: pointer;
-}
-
 .topUpHeader {
 	background: #39689C;
 	padding: 1%;
