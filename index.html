@@ -11,7 +11,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -143,7 +142,7 @@
                             <div class="card-header" role="tab" id="headingOne">
                               <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                 Chef's Phone
+                                 Chef's okon Phone
                                 </a>
                               </h5>
                             </div>
@@ -155,7 +154,7 @@
                                                 <h4>Chef<span>-417-879-60000</span></h4>
                                             </div>
                                             <div>
-                                                <button class="btn btn-primary">TopUp History <i class="fa fa-history" aria="hidden"></i></button>
+                                                <button class="btn btn-primary history-btn">TopUp History <i class="fa fa-history" aria="hidden"></i></button>
                                             </div>
                                         </div>
                                          <div class="col-md-6">
@@ -206,6 +205,9 @@
                                                         </label>
                                                       </div>
                                                     </div>
+                                                    <!-- hidden input element to save network type and data selection-->
+                                                    <input class="network-type" type="hidden" name="network_type" value="">
+                                                    <input class="data-type" type="hidden" name="data_type" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -216,7 +218,7 @@
                             <div class="card-header" role="tab" id="headingTwo">
                               <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  Chef's Phone
+                                  CTO's Phone
                                 </a>
                               </h5>
                             </div>
@@ -225,7 +227,7 @@
                                <div class="row text-center">
                                         <div class="col-md-6">
                                             <div class="benName">
-                                                <h4>Chef<span>-417-879-60000</span></h4>
+                                                <h4>CTO<span>-417-879-60000</span></h4>
                                             </div>
                                             <div>
                                                 <button class="btn btn-primary">TopUp History <i class="fa fa-history" aria="hidden"></i></button>
@@ -233,53 +235,58 @@
                                         </div>
                                          <div class="col-md-6">
                                             <h4 class="border">Choose Amount</h4>
-                                            <div class="top-up-btn">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>500</span>
-                                                        </label>
+                                            <form method="post">
+                                              <div class="top-up-btn">
+                                                  <div class="row">
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>500</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>1000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>1000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>2000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>2000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                </div><div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>5000</span>
-                                                        </label>
+                                                  </div>
+                                                  <div class="row">
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>5000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>10000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>10000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>100000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>100000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                  </div>
+                                                  <input class="network-type" type="hidden" name="network_type" value="">
+                                                  <input class="data-type" type="hidden" name="data_type" value="">
+                                              </div>
+                                            </form>
                                         </div>
                                     </div>
                               </div>
@@ -289,7 +296,7 @@
                             <div class="card-header" role="tab" id="headingThree">
                               <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  Chef's Phone
+                                  Chairman's Phone
                                 </a>
                               </h5>
                             </div>
@@ -298,61 +305,66 @@
                                <div class="row text-center">
                                         <div class="col-md-6">
                                             <div class="benName">
-                                                <h4>Chef<span>-417-879-60000</span></h4>
+                                                <h4>Chairman<span>-417-879-60000</span></h4>
                                             </div>
                                             <div>
-                                                <button class="btn btn-primary">TopUp History <i class="fa fa-history" aria="hidden"></i></button>
+                                                <button class="btn histoty-btn">TopUp History <i class="fa fa-history" aria="hidden"></i></button>
                                             </div>
                                         </div>
                                          <div class="col-md-6">
                                             <h4 class="border">Choose Amount</h4>
-                                            <div class="top-up-btn">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>500</span>
-                                                        </label>
+                                            <form method="post">
+                                              <div class="top-up-btn">
+                                                  <div class="row">
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>500</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>1000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>1000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>2000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>2000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                </div><div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>5000</span>
-                                                        </label>
+                                                  </div>
+                                                  <div class="row">
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>5000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>10000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>10000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="ck-button">
-                                                        <label>
-                                                          <input type="checkbox" name=""> <span>100000</span>
-                                                        </label>
+                                                      <div class="col-md-4">
+                                                        <div class="ck-button">
+                                                          <label>
+                                                            <input type="checkbox" name=""> <span>100000</span>
+                                                          </label>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                  </div>
+                                                  <input class="network-type" type="hidden" name="network_type" value="">
+                                                      <input class="data-type" type="hidden" name="data_type" value="">
+                                              </div>
+                                            </form>
                                         </div>
                                     </div>
                               </div>
@@ -379,6 +391,7 @@
                                         </div>
                                          <div class="col-md-6">
                                             <h4 class="border">Choose Amount</h4>
+                                            <form method="post">
                                             <div class="top-up-btn">
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -402,7 +415,8 @@
                                                         </label>
                                                       </div>
                                                     </div>
-                                                </div><div class="row">
+                                                </div>
+                                                <div class="row">
                                                     <div class="col-md-4">
                                                       <div class="ck-button">
                                                         <label>
@@ -425,7 +439,10 @@
                                                       </div>
                                                     </div>
                                                 </div>
+                                                <input class="network-type" type="hidden" name="network_type" value="">
+                                                      <input class="data-type" type="hidden" name="data_type" value="">
                                             </div>
+                                          </form>
                                         </div>
                                     </div>
                               </div>
@@ -454,48 +471,48 @@
                         <!-------------------------- MTN Bundle ---------------->
                           <div class="box mtn">
                             <div class="data-buddles-field">
-                              <input type="radio" id="switch_mtn_1_5gb" name="dataPlan" value="1.5gb" checked/>
-                              <label for="switch_mtn_1_5gb">
+                              <input type="radio" id="switch_mtn_1500" name="dataPlan" value="1500" checked/>
+                              <label for="switch_mtn_1500">
                                 <div>
                                   <p class="data-allocated">1.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">1000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_mtn_3_5gb" name="dataPlan" value="mtn 3.5gb" checked/>
-                              <label for="switch_mtn_3_5gb">
+                              <input type="radio" id="switch_mtn_3500" name="dataPlan" value="3500" checked/>
+                              <label for="switch_mtn_3500">
                                 <div>
                                   <p class="data-allocated">3.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">2000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_mtn_10gb" name="dataPlan" value="mtn 10gb" checked/>
-                              <label for="switch_mtn_10gb">
+                              <input type="radio" id="switch_mtn_10000" name="dataPlan" value="10000" checked/>
+                              <label for="switch_mtn_10000">
                                 <div>
                                   <p class="data-allocated">10gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">5000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_mtn_22gb" name="dataPlan" value="mtn 22gb" checked/>
-                              <label for="switch_mtn_22gb">
+                              <input type="radio" id="switch_mtn_22000" name="dataPlan" value="22000" checked/>
+                              <label for="switch_mtn_22000">
                                 <div>
                                   <p class="data-allocated">22gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">10000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_mtn_50gb" name="dataPlan" value="mtn 50gb" checked/>
-                              <label for="switch_mtn_50gb">
+                              <input type="radio" id="switch_mtn_50000" name="dataPlan" value="50000" checked/>
+                              <label for="switch_mtn_50000">
                                 <div>
                                   <p class="data-allocated">50gb</p>
                                   <p class="data-bundle-duration">60 days</p>
                                   <p class="data-amount">20000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_mtn_85gb" name="dataPlan" value="mtn 85gb" checked/>
-                              <label for="switch_mtn_85gb">
+                              <input type="radio" id="switch_mtn_85000" name="dataPlan" value="85000" checked/>
+                              <label for="switch_mtn_85000">
                                 <div>
                                   <p class="data-allocated">85gb</p>
                                   <p class="data-bundle-duration">90 days</p>
@@ -507,48 +524,48 @@
                           <!-------------  Airtel Data ---------------->
                           <div class="box airtel">
                             <div class="data-buddles-field">
-                              <input type="radio" id="switch_airtel_1_5gb" name="dataPlan" value="airtel 1.5gb" checked/>
-                              <label for="switch_airtel_1_5gb">
+                              <input type="radio" id="switch_airtel_1500" name="dataPlan" value="1500" checked/>
+                              <label for="switch_airtel_1500">
                                 <div>
                                   <p class="data-allocated">1.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">1000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_airtel_3_5gb" name="dataPlan" value="airtel 3.5gb" checked/>
-                              <label for="switch_airtel_3_5gb">
+                              <input type="radio" id="switch_airtel_3500" name="dataPlan" value="3500" checked/>
+                              <label for="switch_airtel_3500">
                                 <div>
                                   <p class="data-allocated">3.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">2000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_airtel_5gb" name="dataPlan" value="airtel 5gb" checked/>
-                              <label for="switch_airtel_5gb">
+                              <input type="radio" id="switch_airtel_5000" name="dataPlan" value="5000" checked/>
+                              <label for="switch_airtel_5000">
                                 <div>
                                   <p class="data-allocated">5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">2500</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_airtel_7gb" name="dataPlan" value="airtel 7gb" checked/>
-                              <label for="switch_airtel_7gb">
+                              <input type="radio" id="switch_airtel_7000" name="dataPlan" value="7000" checked/>
+                              <label for="switch_airtel_7000">
                                 <div>
                                   <p class="data-allocated">7gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">3500</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_airtel_9gb" name="dataPlan" value="airtel 9gb" checked/>
-                              <label for="switch_airtel_9gb">
+                              <input type="radio" id="switch_airtel_9000" name="dataPlan" value="9000" checked/>
+                              <label for="switch_airtel_9000">
                                 <div>
                                   <p class="data-allocated">9gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">4000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_airtel_50gb" name="dataPlan" value="50gb" checked/>
-                              <label for="switch_airtel_50gb">
+                              <input type="radio" id="switch_airtel_50000" name="dataPlan" value="50000" checked/>
+                              <label for="switch_airtel_50000">
                                 <div>
                                   <p class="data-allocated">50gb</p>
                                   <p class="data-bundle-duration">180 days</p>
@@ -560,40 +577,40 @@
                           <!-----------------  9mobile data plans ------------------>
                           <div class="box 9mobile">
                             <div class="data-buddles-field">
-                                <input type="radio" id="switch_9mobile_500mb" name="dataPlan" value="9mobile 500mb" checked/>
-                                <label for="switch_9mobile_500mb">
+                                <input type="radio" id="switch_9mobile_500" name="dataPlan" value="500" checked/>
+                                <label for="switch_9mobile_500">
                                   <div>
                                     <p class="data-allocated">500mb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">500</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_9mobile_1gb" name="dataPlan" value="9mobile 1gb" checked/>
-                                <label for="switch_9mobile_1gb">
+                                <input type="radio" id="switch_9mobile_1000" name="dataPlan" value="1000" checked/>
+                                <label for="switch_9mobile_1000">
                                   <div>
                                     <p class="data-allocated">1gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">1000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_9mobile_2_5gb" name="dataPlan" value="9mobile 2.5gb" checked/>
-                                <label for="switch_9mobile_2_5gb">
+                                <input type="radio" id="switch_9mobile_2500" name="dataPlan" value="2500" checked/>
+                                <label for="switch_9mobile_2500">
                                   <div>
                                     <p class="data-allocated">2.5gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">2000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_9mobile_5gb" name="dataPlan" value="9mobile 5gb" checked/>
-                                <label for="switch_9mobile_5gb">
+                                <input type="radio" id="switch_9mobile_5000" name="dataPlan" value="5000" checked/>
+                                <label for="switch_9mobile_5000">
                                   <div>
                                     <p class="data-allocated">5gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">3500</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_9mobile_11_5gb" name="dataPlan" value="9mobile 11.5gb" checked/>
-                                <label for="switch_9mobile_11_5gb">
+                                <input type="radio" id="switch_9mobile_11500" name="dataPlan" value="11500" checked/>
+                                <label for="switch_9mobile_11500">
                                   <div>
                                     <p class="data-allocated">11.5gb</p>
                                     <p class="data-bundle-duration">30 days</p>
@@ -605,71 +622,71 @@
                             <!------------------ glo bundle ------------>
                             <div class="box glo">
                               <div class="data-buddles-field">
-                                <input type="radio" id="switch_glo_3_2gb" name="dataPlan" value="glo 3.2gb" checked/>
-                                <label for="switch_glo_3_2gb">
+                                <input type="radio" id="switch_glo_3200" name="dataPlan" value="3200" checked/>
+                                <label for="switch_glo_3200">
                                   <div>
                                     <p class="data-allocated">3.2gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">1000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_7_3gb" name="dataPlan" value="glo 7.5gb" checked/>
-                                <label for="switch_glo_7_3gb">
+                                <input type="radio" id="switch_glo_7500" name="dataPlan" value="7500" checked/>
+                                <label for="switch_glo_7500">
                                   <div>
                                     <p class="data-allocated">7.5gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">2000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_10gb" name="dataPlan" value="glo 10gb" checked/>
-                                <label for="switch_glo_10gb">
+                                <input type="radio" id="switch_glo_10000" name="dataPlan" value="10000" checked/>
+                                <label for="switch_glo_10000">
                                   <div>
                                     <p class="data-allocated">10gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">2500</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_12gb" name="dataPlan" value="glo 12gb" checked/>
-                                <label for="switch_glo_12gb">
+                                <input type="radio" id="switch_glo_12000" name="dataPlan" value="12000" checked/>
+                                <label for="switch_glo_12000">
                                   <div>
                                     <p class="data-allocated">12gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">3000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_16gb" name="dataPlan" value="glo 16gb" checked/>
-                                <label for="switch_glo_16gb">
+                                <input type="radio" id="switch_glo_16000" name="dataPlan" value="6000" checked/>
+                                <label for="switch_glo_16000">
                                   <div>
                                     <p class="data-allocated">16gb</p>
                                     <p class="data-bundle-duration">60 days</p>
                                     <p class="data-amount">4000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_24gb" name="dataPlan" value="glo 24gb" checked/>
-                                <label for="switch_glo_24gb">
+                                <input type="radio" id="switch_glo_24000" name="dataPlan" value="24000" checked/>
+                                <label for="switch_glo_24000">
                                   <div>
                                     <p class="data-allocated">24gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">5000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_32gb" name="dataPlan" value="glo 32gb" checked/>
-                                <label for="switch_glo_32gb">
+                                <input type="radio" id="switch_glo_32gb" name="dataPlan" value="32000" checked/>
+                                <label for="switch_glo_32000">
                                   <div>
                                     <p class="data-allocated">32gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">8000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_46gb" name="dataPlan" value="glo 46gb" checked/>
-                                <label for="switch_glo_46gb">
+                                <input type="radio" id="switch_glo_46000" name="dataPlan" value="46000" checked/>
+                                <label for="switch_glo_46000">
                                   <div>
                                     <p class="data-allocated">46gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">10000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_60gb" name="dataPlan" value="glo 60gb" checked/>
+                                <input type="radio" id="switch_glo_60000" name="dataPlan" value="60000" checked/>
                                 <label for="switch_glo_60gb">
                                   <div>
                                     <p class="data-allocated">60gb</p>
@@ -677,12 +694,12 @@
                                     <p class="data-amount">15000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_glo_90gb" name="dataPlan" value="glo 90gb" checked/>
+                                <input type="radio" id="switch_glo_90000" name="dataPlan" value="90000" checked/>
                                 <label for="switch_glo_90gb">
                                   <div>
                                     <p class="data-allocated">90gb</p>
                                     <p class="data-bundle-duration">30 days</p>
-                                    <p class="data-amount">10000</p>
+                                    <p class="data-amount">18000</p>
                                   </div>
                                 </label>
                               </div>
@@ -714,15 +731,9 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript">
-$(document).ready(function(){
-    $('.switch-field>input[type="radio"]').click(function(){
-        var inputValue = $(this).attr("value");
-        var targetBox = $("." + inputValue);
-        $(".box").not(targetBox).hide();
-        $(targetBox).show();
-    });
-});
-</script>
+    <!--Customize javascript -->
+
+   
+    <script type="text/javascript" src="js/phonetopup.js"></script>
   </body>
 </html>
