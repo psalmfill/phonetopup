@@ -4,8 +4,8 @@ $(document).ready(function(){
         var inputValue = $(this).val();
         var targetBox = $("." + inputValue);
       	$('#accordion .card .show .network-type').val(inputValue);
-        $(".box").not(targetBox).fadeOut(500);
-        $(targetBox).fadeIn(500);
+        $(".box").hide();
+        $(targetBox).show();
     });
     $('.data-bundles input[type="radio"]').click(function(){
         var inputValue = $(this).val();
