@@ -35,8 +35,8 @@ $(document).ready(function(){
    		targetPlan.prop('checked','checked');
    		var inputValue = targetNetwork.val();
    		var targetBox = $("." + inputValue);
-        $(".box").not(targetBox).fadeOut(500);
-        $(targetBox).fadeIn(500);
+        $(".box").not(targetBox).hide();
+        $(targetBox).show();
        }else{
        		$(".box").hide();
        }
