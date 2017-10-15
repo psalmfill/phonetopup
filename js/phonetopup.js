@@ -11,7 +11,7 @@ $(document).ready(function(){
         var inputValue = $(this).val();
       $('#accordion .card .show .data-type').val(inputValue);
     });
-
+       $('#accordion  .card').find('.show').parent().find('.card-header').hide();
 
 
    $('#accordion  .card .card-header').click(function(){
@@ -44,16 +44,25 @@ $(document).ready(function(){
    });
 
 });
+//var bal = balanceCheck("2008189115870","dbcc49ee2fba9f150c5e82");
+
+//alert(bal);
+//document.getElementById("wallet-balance").innerHTML = bal;
 //function to get sms unit balance 
 	function balanceCheck(username,password){
+
 		var url = "https://mobileairtimeng.com/httpapi/balance.php?userid="+username+"&pass="+password;
 		var xmlHttp = new XMLHttpRequest();
-		xmlHttp.open( "get", url, false ); // false for synchronous request
-		xmlHttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xmlHttp.open( "get", url, true ); // false for synchronous request
+		//xmlHttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		xmlHttp.send();
-		var res = xmlHttp.responseText; 
+		alert(xmlHttp.status);
+		return xmlHttp.responseText; 
 	}
-//function for airtime top up 
+//function for airtime top up  https://mobileairtimeng.com/httpapi/balance.php?userid=%2008189115870&pass=dbcc49ee2fba9f150c5e82
+//airtimeTopUp(username,password,phoneno,network,amount)
+//airtimeTopUp(2008189115870,"dbcc49ee2fba9f150c5e82","08188631121","9mobile",100)
+
 	function airtimeTopUp(username,password,phoneno,network,amount){
 
 		var provider;
@@ -79,6 +88,7 @@ $(document).ready(function(){
 		xmlHttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		xmlHttp.send();
 		var res = xmlHttp.responseText; 
+		alert(rest);
 	}
 	function dataTopUp(username,password,phoneno,network,amount){
 

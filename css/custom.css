@@ -14,32 +14,31 @@ h4 {
 #balanceDiv h2 {
 	color: #333333;
 	font-size: 25px;
+
 	
 }
 
-#balance {
+.balance {
 	border-right: 0.75px solid #828282;
 
 }
-#balance h2 {
-	margin-bottom: 10%;
 
-}
-#balance h3 {
+.balance h3 {
 	color: #00aeff;
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
 	font-size: 30px;
 
 }
-#balance #balHolder {
+.balance .balHolder {
 	border: 2px solid #C4C4C4;
 	padding: 1%;
+	margin: 1%;
 }
-#balance #balHolder p {
+.balance .balHolder p {
 	font-size: 35px;
 	color: #333333;
-	padding: 2%;
+	padding: 1%;
 }
 #wallet-topUpBtn {
 	padding:1%;
@@ -233,7 +232,7 @@ h4 {
   margin: 0 auto;
 }
 .data-bundles {
-
+	margin-left: 8%;
 }
 .data-bundles input {
     position: absolute !important;
@@ -304,21 +303,16 @@ h4 {
 	display: block;
 }
 /* transaction history modal style */
-#transaction-history {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-}
 #transaction-history  .modal-dialog {
-	padding: 0;
-	margin: 0;
-	width: 100%;
+	width: 96% !important;
+  height: 96% !important;
+  margin: 2%;
+  padding: 0;
 }
 #transaction-history  .modal-dialog .modal-content{
-	padding: 0;
-	margin: 0;
-	width: 100%;
+	
 }
+
 /*   modal pegination */
 .pagination {
 	text-align: center;
