@@ -11,9 +11,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <script type="text/javascript" src="js/jquery.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
   </head>
 
   <body>
@@ -62,11 +63,20 @@
         </div>
         <div class="col-md-10 border" id="body">
             <div class="row" id="balanceDiv">
-                <div class="col-md-6" id="balance">
-                    <h2>Balance</h2>
-                    <div class="text-center" id="balHolder">
-                        <h3>Available in wallet</h3>
-                        <p>#1,000,000</p>
+                <div class="col-md-6 balance">
+                    <div class="balHolder">
+                      <h2>Wallet</h2>
+                      <div class="text-center" >
+                          <h3>Available Balance</h3>
+                          <p id="wallet-balance">#1,000,000</p>
+                      </div>
+                    </div>
+                    <div class="balHolder">
+                      <h2>Phone Top Up</h2>
+                      <div class="text-center">
+                          <h3>Available Balance</h3>
+                          <p>#1,000,000</p>
+                      </div>
                     </div>
                 </div> 
                 <div class="col-md-6">
@@ -147,14 +157,14 @@
                               </h5>
                             </div>
 
-                            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                               <div class="row text-center">
                                         <div class="col-md-6">
                                             <div class="benName">
                                                 <h4>Chef<span>-417-879-60000</span></h4>
                                             </div>
                                             <div>
-                                                <button class="btn btn-primary history-btn">TopUp History <i class="fa fa-history" aria="hidden"></i></button>
+                                                <button class="btn btn-primary history-btn" data-toggle="modal" data-target="#transaction-history">TopUp History <i class="fa fa-history" aria="hidden"></i></button>
                                             </div>
                                         </div>
                                          <div class="col-md-6">
@@ -471,52 +481,36 @@
                         <!-------------------------- MTN Bundle ---------------->
                           <div class="box mtn">
                             <div class="data-buddles-field">
-                              <input type="radio" id="switch_mtn_1500" name="dataPlan" value="1500" checked/>
-                              <label for="switch_mtn_1500">
+                              <input type="radio" id="switch_mtn_100" name="dataPlan" value="100" />
+                              <label for="switch_mtn_100">
+                                <div>
+                                  <p class="data-allocated">30mb</p>
+                                  <p class="data-bundle-duration">1 day</p>
+                                  <p class="data-amount">100</p>
+                                </div>
+                              </label>
+                              <input type="radio" id="switch_mtn_500" name="dataPlan" value="500" />
+                              <label for="switch_mtn_500">
+                                <div>
+                                  <p class="data-allocated">750mb</p>
+                                  <p class="data-bundle-duration">7 days</p>
+                                  <p class="data-amount">500</p>
+                                </div>
+                              </label>
+                              <input type="radio" id="switch_mtn_1000" name="dataPlan" value="1000" />
+                              <label for="switch_mtn_1000">
                                 <div>
                                   <p class="data-allocated">1.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">1000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_mtn_3500" name="dataPlan" value="3500" checked/>
-                              <label for="switch_mtn_3500">
+                              <input type="radio" id="switch_mtn_2000" name="dataPlan" value="2000" />
+                              <label for="switch_mtn_2000">
                                 <div>
                                   <p class="data-allocated">3.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">2000</p>
-                                </div>
-                              </label>
-                              <input type="radio" id="switch_mtn_10000" name="dataPlan" value="10000" checked/>
-                              <label for="switch_mtn_10000">
-                                <div>
-                                  <p class="data-allocated">10gb</p>
-                                  <p class="data-bundle-duration">30 days</p>
-                                  <p class="data-amount">5000</p>
-                                </div>
-                              </label>
-                              <input type="radio" id="switch_mtn_22000" name="dataPlan" value="22000" checked/>
-                              <label for="switch_mtn_22000">
-                                <div>
-                                  <p class="data-allocated">22gb</p>
-                                  <p class="data-bundle-duration">30 days</p>
-                                  <p class="data-amount">10000</p>
-                                </div>
-                              </label>
-                              <input type="radio" id="switch_mtn_50000" name="dataPlan" value="50000" checked/>
-                              <label for="switch_mtn_50000">
-                                <div>
-                                  <p class="data-allocated">50gb</p>
-                                  <p class="data-bundle-duration">60 days</p>
-                                  <p class="data-amount">20000</p>
-                                </div>
-                              </label>
-                              <input type="radio" id="switch_mtn_85000" name="dataPlan" value="85000" checked/>
-                              <label for="switch_mtn_85000">
-                                <div>
-                                  <p class="data-allocated">85gb</p>
-                                  <p class="data-bundle-duration">90 days</p>
-                                  <p class="data-amount">50000</p>
                                 </div>
                               </label>
                             </div>
@@ -524,52 +518,44 @@
                           <!-------------  Airtel Data ---------------->
                           <div class="box airtel">
                             <div class="data-buddles-field">
-                              <input type="radio" id="switch_airtel_1500" name="dataPlan" value="1500" checked/>
-                              <label for="switch_airtel_1500">
+                              <input type="radio" id="switch_airtel_100" name="dataPlan" value="100" />
+                              <label for="switch_airtel_100">
+                                <div>
+                                  <p class="data-allocated">30mb</p>
+                                  <p class="data-bundle-duration">1 day</p>
+                                  <p class="data-amount">100</p>
+                                </div>
+                              </label>
+                              <input type="radio" id="switch_airtel_500" name="dataPlan" value="500" />
+                              <label for="switch_airtel_500">
+                                <div>
+                                  <p class="data-allocated">750mb</p>
+                                  <p class="data-bundle-duration">7 days</p>
+                                  <p class="data-amount">500</p>
+                                </div>
+                              </label>
+                              <input type="radio" id="switch_airtel_1000" name="dataPlan" value="1000" />
+                              <label for="switch_airtel_1000">
                                 <div>
                                   <p class="data-allocated">1.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">1000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_airtel_3500" name="dataPlan" value="3500" checked/>
-                              <label for="switch_airtel_3500">
+                              <input type="radio" id="switch_airtel_2000" name="dataPlan" value="2000" />
+                              <label for="switch_airtel_2000">
                                 <div>
                                   <p class="data-allocated">3.5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">2000</p>
                                 </div>
                               </label>
-                              <input type="radio" id="switch_airtel_5000" name="dataPlan" value="5000" checked/>
-                              <label for="switch_airtel_5000">
+                              <input type="radio" id="switch_airtel_2500" name="dataPlan" value="2500" checked/>
+                              <label for="switch_airtel_2500">
                                 <div>
                                   <p class="data-allocated">5gb</p>
                                   <p class="data-bundle-duration">30 days</p>
                                   <p class="data-amount">2500</p>
-                                </div>
-                              </label>
-                              <input type="radio" id="switch_airtel_7000" name="dataPlan" value="7000" checked/>
-                              <label for="switch_airtel_7000">
-                                <div>
-                                  <p class="data-allocated">7gb</p>
-                                  <p class="data-bundle-duration">30 days</p>
-                                  <p class="data-amount">3500</p>
-                                </div>
-                              </label>
-                              <input type="radio" id="switch_airtel_9000" name="dataPlan" value="9000" checked/>
-                              <label for="switch_airtel_9000">
-                                <div>
-                                  <p class="data-allocated">9gb</p>
-                                  <p class="data-bundle-duration">30 days</p>
-                                  <p class="data-amount">4000</p>
-                                </div>
-                              </label>
-                              <input type="radio" id="switch_airtel_50000" name="dataPlan" value="50000" checked/>
-                              <label for="switch_airtel_50000">
-                                <div>
-                                  <p class="data-allocated">50gb</p>
-                                  <p class="data-bundle-duration">180 days</p>
-                                  <p class="data-amount">36000</p>
                                 </div>
                               </label>
                             </div>
@@ -577,11 +563,11 @@
                           <!-----------------  9mobile data plans ------------------>
                           <div class="box 9mobile">
                             <div class="data-buddles-field">
-                                <input type="radio" id="switch_9mobile_500" name="dataPlan" value="500" checked/>
-                                <label for="switch_9mobile_500">
+                                <input type="radio" id="switch_9mobile_200" name="dataPlan" value="200" checked/>
+                                <label for="switch_9mobile_200">
                                   <div>
-                                    <p class="data-allocated">500mb</p>
-                                    <p class="data-bundle-duration">30 days</p>
+                                    <p class="data-allocated">200mb</p>
+                                    <p class="data-bundle-duration">7 days</p>
                                     <p class="data-amount">500</p>
                                   </div>
                                 </label>
@@ -593,34 +579,27 @@
                                     <p class="data-amount">1000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_9mobile_2500" name="dataPlan" value="2500" checked/>
-                                <label for="switch_9mobile_2500">
+                                <input type="radio" id="switch_9mobile_2000" name="dataPlan" value="2000" checked/>
+                                <label for="switch_9mobile_2000">
                                   <div>
                                     <p class="data-allocated">2.5gb</p>
                                     <p class="data-bundle-duration">30 days</p>
                                     <p class="data-amount">2000</p>
                                   </div>
                                 </label>
-                                <input type="radio" id="switch_9mobile_5000" name="dataPlan" value="5000" checked/>
-                                <label for="switch_9mobile_5000">
+                                <input type="radio" id="switch_9mobile_2500" name="dataPlan" value="2500" checked/>
+                                <label for="switch_9mobile_2500">
                                   <div>
-                                    <p class="data-allocated">5gb</p>
+                                    <p class="data-allocated">3.5gb</p>
                                     <p class="data-bundle-duration">30 days</p>
-                                    <p class="data-amount">3500</p>
-                                  </div>
-                                </label>
-                                <input type="radio" id="switch_9mobile_11500" name="dataPlan" value="11500" checked/>
-                                <label for="switch_9mobile_11500">
-                                  <div>
-                                    <p class="data-allocated">11.5gb</p>
-                                    <p class="data-bundle-duration">30 days</p>
-                                    <p class="data-amount">8000</p>
+                                    <p class="data-amount">2500</p>
                                   </div>
                                 </label>
                               </div>
                             </div>
                             <!------------------ glo bundle ------------>
                             <div class="box glo">
+                              <!--
                               <div class="data-buddles-field">
                                 <input type="radio" id="switch_glo_3200" name="dataPlan" value="3200" checked/>
                                 <label for="switch_glo_3200">
@@ -703,10 +682,11 @@
                                   </div>
                                 </label>
                               </div>
-                            </div>
+                            </div>-->
                         </div>
                         <button class="btn btn-primary btn-block">TOP ALL</button>
                        
+
                     </div>
                 </div>
                 
@@ -714,7 +694,67 @@
         </div>
 
       </div>
+        <!---Modal for transaction history-->
+    <div class="modal fade" id="transaction-history">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Transaction History</h4>
+              </div>
+              <div class="modal-body">
+              <div class="box-header with-border">
+                <h3 class="box-title"> Details</h3>
+              </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <form role="form">
+                <!-- text input -->
+                <div class="form-group">
+                  <label>Email</label>
+                  <input class="form-control" value="johseph.mbassey2@gmail.com"  type="Email" disabled>
+                </div>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input class="form-control" value="Jonesky"  type="text" disabled>
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input class="form-control" value="***********"  type="Password" disabled>
+                </div>
 
+                <div class="form-group">
+                  <label>Api Id</label>
+                  <input class="form-control" value="jjdcjf68fv25s8dxe4cvvrf8r8frf"  type="text" disabled>
+                </div>
+                 <div class="form-group">
+                  <label>Top-Up Amount</label>
+                  <input class="form-control"  type="text" >
+                </div>
+                <div class="pagination">
+                    <ul>
+                      <i><a href="">previous</a></li>
+                      <li class="active"><a href="">1</a></li>
+                      <li><a href="">2</a></li>
+                      <li><a href="">3</a></li>
+                      <li><a href="">4</a></li>
+                      <i><a href="">last</a></li>
+                    </ul>
+                </div>
+                <div class="controls">
+                   <button type="button" class="btn btn-default">Cancel</button>
+                </div>
+              </form>
+
+              </div>
+              
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
       <hr>
 
       <footer>
@@ -726,8 +766,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>-->
+    <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
